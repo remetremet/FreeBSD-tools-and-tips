@@ -4,8 +4,11 @@ Usefull commands in FreeBSD
 OS/system
 ====
 Shutdown and poweroff: `shutdown -p now`
+
 Get size of system memory: `/sbin/sysctl -n hw.physmem`
+
 Get list of disks: `/sbin/sysctl -n kern.disks`
+
 Check if HDD spinning: `smartctl -i -n never /dev/da0 | grep "Power mode" | awk '{ print $4 }'` (needs pkg **smartmontools**)
 
 Sendmail
@@ -25,6 +28,7 @@ Create memory disk:
 /sbin/newfs -U /dev/md0
 /sbin/mount /dev/md0 ${path}
 ```
+
 Destroy memory disk:
 ```
 /sbin/umount -f /dev/md0
