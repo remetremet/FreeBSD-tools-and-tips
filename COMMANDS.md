@@ -37,5 +37,8 @@ Destroy memory disk:
 
 Audio/Video
 ---
-Get video parameters: `ffprobe -v quiet -print_format json -show_format -show_streams -print_format json "${i}"` (needs pkg **ffmpeg**)
+Get video parameters: (needs pkg **ffmpeg**)
+```
+ffprobe -v quiet -print_format json -show_format -show_streams -print_format json "${filename}"
+```
 
