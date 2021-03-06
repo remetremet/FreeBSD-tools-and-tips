@@ -5,7 +5,13 @@ OS/system
 ---
 Get server name: `uname -a`
 
-Get size of system memory: `/sbin/sysctl -n hw.physmem`
+Get CPU info:
+```
+/sbin/sysctl hw.model
+/sbin/sysctl hw.ncpu
+```
+
+Get size of system memory: `/sbin/sysctl hw.physmem`
 
 Shutdown and poweroff: `shutdown -p now`
 
@@ -119,6 +125,24 @@ Put HDD into sleep mode:
 /sbin/camcontrol stop ${disk}         #(for SAS/SCSI controllers - daX devices)
 ```
 
+HDD/SSD/other devices stats: `iostat -w1` (in bytes per second)
+
+
+Memory disk
+---
+Create memory disk:
+```
+/sbin/mdconfig -a -t malloc -s ${size} -u 0 -o reserve
+/sbin/newfs -U /dev/md0
+/sbin/mount /dev/md0 ${path}
+```
+
+Destroy memory disk:
+```
+/sbin/umount -f /dev/md0
+/sbin/mdconfig -d -u 0
+```
+
 
 GELI (disk encryption)
 ---
@@ -156,21 +180,7 @@ Set default route (gateway): `route add default 1.2.3.4`
 
 Get IPFW rules incl. number of packets and bytes: `ipfw -a list`
 
-
-Memory disk
----
-Create memory disk:
-```
-/sbin/mdconfig -a -t malloc -s ${size} -u 0 -o reserve
-/sbin/newfs -U /dev/md0
-/sbin/mount /dev/md0 ${path}
-```
-
-Destroy memory disk:
-```
-/sbin/umount -f /dev/md0
-/sbin/mdconfig -d -u 0
-```
+Get network stats: `netstat -w1` (in bytes, can be used **-w8** to get in bits per second)
 
 
 Sendmail
