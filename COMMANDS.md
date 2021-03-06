@@ -4,13 +4,17 @@ Usefull commands in FreeBSD
 OS/system
 ---
 Get server name: `uname -a`
+
 Get size of system memory: `/sbin/sysctl -n hw.physmem`
+
 Shutdown and poweroff: `shutdown -p now`
 
 List of kernel modules loaded: `kldstat`
+
 Load kernel module: `kldload coretemp`
 
 List USB devices: `/usr/sbin/usbconfig`
+
 List PCI connected devices: `/usr/sbin/pciconf -lv`
 
 Update FreeBSD OS: (binary, for -RELEASE only, binary updates are not available for -CURRENT, -STABLE or previously source-updated installations)
@@ -18,6 +22,7 @@ Update FreeBSD OS: (binary, for -RELEASE only, binary updates are not available 
 freebsd-update fetch
 freebsd-update install
 ```
+
 Upgrade FreeBSD OS to newer release: (binary updates are not available for -CURRENT, -STABLE or previously source-updated installations)
 ```
 freebsd-update upgrade -r 13.0-RELEASE
@@ -44,7 +49,9 @@ pkg unlock ${name}
 ```
 
 Update package database: `pkg update`
+
 Update packages: `pkg upgrade [-f]` (optional with parameter **-f** = forced)
+
 List of installed packages: `pkg info`
 
 Search for ports:
@@ -73,13 +80,21 @@ make update
 Disk drives
 ---
 Get list of disks: `/sbin/sysctl -n kern.disks` or `/sbin/camcontrol devlist`
+
 Create disk GPT partition table: `/sbin/gpart create -s GPT ${disk}`
+
 Create disk MBR partition table: `/sbin/gpart create -s MBR ${disk}`
+
 Delete disk partition table: `/sbin/gpart destroy -F ${disk}`
+
 Add disk partition: `/sbin/gpart add -t freebsd-ufs -b 128 -a 4k ${drive}`
+
 Delete disk partition: `/sbin/gpart delete -i ${partition} ${disk}`
+
 Format disk partition: `/sbin/newfs -S4096 -b32768 -f4096 -O2 -U -m 0 /dev/${disk}${partition}`
+
 Mounting disk partition: `/sbin/mount -o noatime,rw /dev/${disk}${partition} ${path}`
+
 Check if HDD spinning: `smartctl -i -n never /dev/da0 | grep "Power mode" | awk '{ print $4 }'` (needs pkg **smartmontools**)
 
 Put HDD into sleep mode:
@@ -92,8 +107,11 @@ Put HDD into sleep mode:
 GELI (disk encryption)
 ---
 Create random keyfile: `/bin/dd if=/dev/random of=${keyfile} bs=6597 count=123` (creates key of size 811431 bytes)
+
 Create GELI encrypted partition: `/sbin/geli init -K ${keyfile} -J -s 4096 -l 256 ${disk}${partition}`
+
 Attaching GELI encrypted partition: `/sbin/geli attach -k ${keyfile} -j ${disk}${partition}` (creates new device **${disk}${partition}.eli**)
+
 Detaching GELI encrypted partition: `/sbin/geli detach ${disk}${partition}.eli`
 
 
@@ -113,9 +131,13 @@ Decrypt file with AES256:
 Network
 ---
 Get network interface status: `ifconfig`
+
 Get routing table: `netstat -nr`
+
 Get open TCP/UDP ports: `netstat -na`
+
 Set default route (gateway): `route add default 1.2.3.4`
+
 Get IPFW rules incl. number of packets and bytes: `ipfw -a list`
 
 
