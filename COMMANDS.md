@@ -30,16 +30,16 @@ freebsd-update upgrade -r 13.0-RELEASE
 
 OS/packages/ports
 ---
-**Packages** = binary precompiled with default settings
+**Packages** = binary precompiled with default settings, in some cases is needed to use **pkg-static** instead of **pkg**
 **Ports** = source, compiled on server, possibility to set different options
 
 Search for package: `pkg search ${name}`
 
-Install package: `pkg install ${name}` (optional with parameter **-y** = yes to all confirmations)
-
-Update packages: `pkg upgrade` (optional with parameter **-f** = forced)
-
-Uninstall package: `pkg delete ${name}`
+Install and uninstall package: (optional with parameter **-y** = yes to all confirmations)
+```
+pkg install ${name}
+pkg delete ${name}
+```
 
 Lock and unlock package: (to prevent update to newer versions)
 ```
@@ -47,7 +47,32 @@ pkg lock ${name}
 pkg unlock ${name}
 ```
 
-Search for ports
+Update package database: `pkg update`
+
+Update packages: `pkg upgrade` (optional with parameter **-f** = forced)
+
+Search for ports:
+```
+cd /usr/ports
+make search name=${name}
+```
+
+Compile, install and uninstall port:
+```
+cd /usr/ports/${path}/${name}
+make
+make install
+make deinstall
+make clean        # clean directory after compilation (to force compiling everything from source again)
+make distclean    # clean downloaded source files (to force of downloading them again)
+```
+
+Update ports:
+```
+cd /usr/ports
+make update
+```
+
 
 Disk drives
 ---
