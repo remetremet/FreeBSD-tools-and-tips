@@ -3,14 +3,24 @@ Usefull commands in FreeBSD
 
 OS/system
 ---
-Shutdown and poweroff: `shutdown -p now`
+Get server name: `uname -a`
 
 Get size of system memory: `/sbin/sysctl -n hw.physmem`
+
+Shutdown and poweroff: `shutdown -p now`
+
+List of kernel modules loaded: `kldstat`
+
+Load kernel module: `kldload coretemp`
+
+List USB devices: `/usr/sbin/usbconfig`
+
+List PCI connected devices: `/usr/sbin/pciconf -lv`
 
 
 Disk drives
 ---
-Get list of disks: `/sbin/sysctl -n kern.disks`
+Get list of disks: `/sbin/sysctl -n kern.disks` or `/sbin/camcontrol devlist`
 
 Create disk GPT partition table: `/sbin/gpart create -s GPT ${disk}`
 
