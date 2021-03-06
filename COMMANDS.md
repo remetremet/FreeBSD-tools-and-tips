@@ -59,6 +59,7 @@ shutdown -r now
 OS/packages/ports
 ---
 **Packages** = binary precompiled with default settings, in some cases is needed to use **pkg-static** instead of **pkg**
+
 **Ports** = source, compiled on server, possibility to set different options
 
 Search for package: `pkg search ${name}`
