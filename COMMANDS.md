@@ -116,11 +116,11 @@ Create disk MBR partition table: `/sbin/gpart create -s MBR ${disk}`
 
 Delete disk partition table: `/sbin/gpart destroy -F ${disk}`
 
-Add disk partition: `/sbin/gpart add -t freebsd-ufs -b 128 -a 4k ${drive}`
+Add disk partition: `/sbin/gpart add -t freebsd-ufs -b 128 -a 4k ${drive}` (incl. 4K alignment)
 
 Delete disk partition: `/sbin/gpart delete -i ${partition} ${disk}`
 
-Format disk partition: `/sbin/newfs -S4096 -b32768 -f4096 -O2 -U -m 0 /dev/${disk}${partition}`
+Format disk partition: `/sbin/newfs -S4096 -b32768 -f4096 -O2 -U -m 0 /dev/${disk}${partition}` (incl. 4K alignment)
 
 Mounting disk partition: `/sbin/mount -o noatime,rw /dev/${disk}${partition} ${path}`
 
@@ -153,9 +153,9 @@ Destroy memory disk:
 
 GELI (disk encryption)
 ---
-Create random keyfile: `/bin/dd if=/dev/random of=${keyfile} bs=6597 count=123` (creates key of size 811431 bytes)
+Create random keyfile: `/bin/dd if=/dev/random of=${keyfile} bs=6597 count=123` (creates key of size 6597*123= 811431 bytes)
 
-Create GELI encrypted partition: `/sbin/geli init -K ${keyfile} -J -s 4096 -l 256 ${disk}${partition}`
+Create GELI encrypted partition: `/sbin/geli init -K ${keyfile} -J -s 4096 -l 256 ${disk}${partition}` (incl. 4K alignment)
 
 Attaching GELI encrypted partition: `/sbin/geli attach -k ${keyfile} -j ${disk}${partition}` (creates new device **${disk}${partition}.eli**)
 
