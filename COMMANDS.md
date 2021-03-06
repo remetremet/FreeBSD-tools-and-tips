@@ -17,6 +17,14 @@ List USB devices: `/usr/sbin/usbconfig`
 
 List PCI connected devices: `/usr/sbin/pciconf -lv`
 
+Update FreeBSD:
+```
+freebsd-update fetch
+freebsd-update install
+```
+
+Upgrade FreeBSD to newer release: `freebsd-update upgrade -r 13.0-RELEASE` (where it can be any new -RELEASE version)
+
 
 Disk drives
 ---
