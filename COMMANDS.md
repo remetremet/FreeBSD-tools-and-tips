@@ -7,13 +7,17 @@ Restart:  `reboot` or `shutdown -r now`
 
 Shutdown and poweroff: `shutdown -p now`
 
-Get server name: `uname -a`
+Get server and OS info: `uname -a`
 
 Get CPU info:
 ```
 /sbin/sysctl hw.model
 /sbin/sysctl hw.ncpu
 ```
+
+Get CPU temperature: `/sbin/sysctl -a | grep "dev.cpu.*.temperature"` (requires kldload coretemp or amdtemp before)
+
+Get CPU frequency: `/sbin/sysctl dev.cpu.0.freq` (if supported)
 
 Get size of system memory: `/sbin/sysctl hw.physmem`
 
