@@ -37,6 +37,13 @@ Attaching GELI encrypted partition: `/sbin/geli attach -k ${keyfile} -j ${disk}$
 Detaching GELI encrypted partition: `/sbin/geli detach ${disk}${partition}.eli`
 
 
+File crypting
+---
+Encrypt file with AES256: `/usr/local/bin/openssl enc -aes256 -pass pass:"${password}" -salt -in "${filename}" -out "${crypted_filename}" -e`
+
+Decrypt file with AES256: `openssl enc -aes256 -pass pass:"${password}" -salt -in "${crypted_filename}" -out "${output_filename}" -d`
+
+
 Network
 ---
 Get network interface status: `ifconfig`
