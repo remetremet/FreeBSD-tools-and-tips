@@ -3,6 +3,10 @@ Usefull commands in FreeBSD
 
 OS/system
 ---
+Restart:  `reboot` or `shutdown -r now`
+
+Shutdown and poweroff: `shutdown -p now`
+
 Get server name: `uname -a`
 
 Get CPU info:
@@ -12,8 +16,6 @@ Get CPU info:
 ```
 
 Get size of system memory: `/sbin/sysctl hw.physmem`
-
-Shutdown and poweroff: `shutdown -p now`
 
 List of kernel modules loaded and load kernel module: 
 ```
