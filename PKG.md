@@ -40,7 +40,7 @@ pkg install screen smartmontools sudo tcpdump usbutils wget zabbix52-agent
 ```
 
 
-Optional packages
+Optional packages (DB, mail, VPN, DHCP, DNS, Zabbix, Samba, ...)
 ===
 - apache24
 - bind916
