@@ -47,6 +47,7 @@ Optional packages
 - cclient
 - clamav
 - cyrus-sasl-saslauthd
+- easy-rsa
 - ffmpeg
 - isc-dhcp44-server
 - imap-uw
@@ -64,7 +65,9 @@ Optional packages
 - nut
 - opendkim
 - openipmi
+- openvpn
 - php74
+- portupgrade
 - procmail
 - py37-speedtest-cli
 - samba411
@@ -78,9 +81,9 @@ Optional packages
 - zabbix52-proxy
 - zabbix52-server
 ```
-pkg install apache24 bind916 cclient clamav cyrus-sasl-saslauthd ffmpeg isc-dhcp44-server imap-uw maildrop
-pkg install mariadb104-client mariadb104-server mediatomb milter-greylist mod_php74 mysql57-client
-pkg install mysql57-server mysqltuner net-snmp nginx nut opendkim openipmi php74 procmail py37-speedtest-cli
-pkg install samba411 sendmail ser2net spamass-milter spamassassin sqlite3 unbound zabbix52-frontend
-pkg install zabbix52-proxy zabbix52-server
+pkg install apache24 bind916 cclient clamav cyrus-sasl-saslauthd easy-rsa ffmpeg isc-dhcp44-server imap-uw
+pkg install maildrop mariadb104-client mariadb104-server mediatomb milter-greylist mod_php74 mysql57-client
+pkg install mysql57-server mysqltuner net-snmp nginx nut opendkim openipmi openvpn php74 portupgrade procmail
+pkg install py37-speedtest-cli samba411 sendmail ser2net spamass-milter spamassassin sqlite3 unbound
+pkg install zabbix52-frontend zabbix52-proxy zabbix52-server
 ```
