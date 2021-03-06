@@ -61,6 +61,7 @@ Optional packages
 - mysqltuner
 - net-snmp
 - nginx
+- nut
 - opendkim
 - openipmi
 - php74
@@ -68,6 +69,7 @@ Optional packages
 - py37-speedtest-cli
 - samba411
 - sendmail
+- ser2net
 - spamass-milter
 - spamassassin
 - sqlite3
@@ -76,7 +78,9 @@ Optional packages
 - zabbix52-proxy
 - zabbix52-server
 ```
-pkg install apache24 bind916 cclient clamav cyrus-sasl-saslauthd ffmpeg isc-dhcp44-server imap-uw maildrop mariadb104-client mariadb104-server
-pkg install mediatomb milter-greylist mod_php74 mysql57-client mysql57-server mysqltuner net-snmp nginx opendkim openipmi php74 procmail 
-pkg install py37-speedtest-cli samba411 sendmail spamass-milter spamassassin sqlite3 unbound zabbix52-frontend zabbix52-proxy zabbix52-server
+pkg install apache24 bind916 cclient clamav cyrus-sasl-saslauthd ffmpeg isc-dhcp44-server imap-uw maildrop
+pkg install mariadb104-client mariadb104-server mediatomb milter-greylist mod_php74 mysql57-client
+pkg install mysql57-server mysqltuner net-snmp nginx nut opendkim openipmi php74 procmail py37-speedtest-cli
+pkg install samba411 sendmail ser2net spamass-milter spamassassin sqlite3 unbound zabbix52-frontend
+pkg install zabbix52-proxy zabbix52-server
 ```
