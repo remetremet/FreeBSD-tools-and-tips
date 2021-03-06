@@ -19,6 +19,8 @@ Get CPU temperature: `/sbin/sysctl -a | grep "dev.cpu.*.temperature"` (requires 
 
 Get CPU frequency: `/sbin/sysctl dev.cpu.0.freq` (if supported)
 
+Get CPU interrupt stats: `vmstat -i`
+
 Get size of system memory: `/sbin/sysctl hw.physmem`
 
 List of kernel modules loaded and load kernel module: 
