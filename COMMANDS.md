@@ -42,6 +42,9 @@ freebsd-update install
 Upgrade FreeBSD OS to newer release: (binary updates are not available for -CURRENT, -STABLE or previously source-updated installations)
 ```
 freebsd-update upgrade -r 13.0-RELEASE
+freebsd-update install
+shutdown -r now
+freebsd-update install
 ```
 
 Compile/update whole FreeBSD OS from source:
@@ -101,10 +104,25 @@ make clean        # clean directory after compilation (to force compiling everyt
 make distclean    # clean downloaded source files (to force of downloading them again)
 ```
 
-Update ports:
+Update ports database:
 ```
 cd /usr/ports
 make update
+```
+
+Update ports: (needs pkg **portupgrade**)
+```
+cd /usr/ports
+make update
+portupgrade -a
+```
+
+Upgrade ports: (old major version to new version)
+```
+cd /usr/ports
+make update
+portupgrade -o lang/perl5.20 -f perl5.16
+portupgrade -fr p5
 ```
 
 
@@ -192,9 +210,14 @@ Get IPFW rules incl. number of packets and bytes: `ipfw -a list`
 Get network stats: `netstat -w1` (in bytes, can be used **-w8** to get in bits per second)
 
 
+Let's Encrypt
+---
+Renew certificates: `certbot renew`
+
+
 Sendmail
 ---
-Generate dh.param for Sendmail:
+Generate missing **dh.param** for Sendmail:
 ```
 cd /etc/mail/certs
 openssl dhparam -out dh.param 4096
