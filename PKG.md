@@ -20,7 +20,9 @@ Basic usefull packages I install on my FreeBSD servers:
 - lynx
 - mc
 - nmap
+- openssl
 - pciids
+- pciutils
 - perl5
 - python37
 - rsync
@@ -33,26 +35,48 @@ Basic usefull packages I install on my FreeBSD servers:
 - zabbix52-agent
 ```
 pkg install bash bash-completion bind-tools bsdstats ca_root_nss curl dhcpdump fping git iftop
-pkg install iperf3 iso-codes joe links lsof lynx mc nmap pciids perl5 python37 rsync screen
-pkg install smartmontools sudo tcpdump usbutils wget zabbix52-agent
+pkg install iperf3 iso-codes joe links lsof lynx mc nmap openssl pciids pciutils perl5 python37 rsync
+pkg install screen smartmontools sudo tcpdump usbutils wget zabbix52-agent
 ```
 
 
 Optional packages
 ===
-- bind
+- apache24
+- bind916
+- cclient
+- clamav
+- cyrus-sasl-saslauthd
 - ffmpeg
 - isc-dhcp44-server
+- imap-uw
+- maildrop
+- mariadb104-client
+- mariadb104-server
 - mediatomb
+- milter-greylist
+- mod_php74
 - mysql57-client
 - mysql57-server
+- mysqltuner
 - net-snmp
-- php73
+- nginx
+- opendkim
+- openipmi
+- php74
+- procmail
 - py37-speedtest-cli
 - samba411
+- sendmail
+- spamass-milter
+- spamassassin
+- sqlite3
 - unbound
+- zabbix52-frontend
 - zabbix52-proxy
+- zabbix52-server
 ```
-pkg install bind ffmpeg isc-dhcp44-server mediatomb mysql57-client mysql57-server net-snmp php73
-pkg install py37-speedtest-cli samba411 unbound zabbix52-proxy
+pkg install apache24 bind916 cclient clamav cyrus-sasl-saslauthd ffmpeg isc-dhcp44-server imap-uw maildrop mariadb104-client mariadb104-server
+pkg install mediatomb milter-greylist mod_php74 mysql57-client mysql57-server mysqltuner net-snmp nginx opendkim openipmi php74 procmail 
+pkg install py37-speedtest-cli samba411 sendmail spamass-milter spamassassin sqlite3 unbound zabbix52-frontend zabbix52-proxy zabbix52-server
 ```
