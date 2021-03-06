@@ -17,14 +17,15 @@ List USB devices: `/usr/sbin/usbconfig`
 
 List PCI connected devices: `/usr/sbin/pciconf -lv`
 
-Update FreeBSD OS (binary, for -RELEASE only):
- - binary updates are not available for -CURRENT, -STABLE or previously source-updated installations.
+Update FreeBSD OS: (binary, for -RELEASE only, binary updates are not available for -CURRENT, -STABLE or previously source-updated installations)
 ```
 freebsd-update fetch
 freebsd-update install
 ```
-Upgrade FreeBSD OS to newer release: `freebsd-update upgrade -r 13.0-RELEASE` (where it can be any new -RELEASE version)
- - binary updates are not available for -CURRENT, -STABLE or previously source-updated installations.
+Upgrade FreeBSD OS to newer release: (binary updates are not available for -CURRENT, -STABLE or previously source-updated installations)
+```
+freebsd-update upgrade -r 13.0-RELEASE
+```
 
 
 OS/packages/ports
