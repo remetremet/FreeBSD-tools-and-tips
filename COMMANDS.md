@@ -17,28 +17,36 @@ List USB devices: `/usr/sbin/usbconfig`
 
 List PCI connected devices: `/usr/sbin/pciconf -lv`
 
-Update FreeBSD OS:
+Update FreeBSD OS (binary, for -RELEASE only):
+ - binary updates are not available for -CURRENT, -STABLE or previously source-updated installations.
 ```
 freebsd-update fetch
 freebsd-update install
 ```
-
 Upgrade FreeBSD OS to newer release: `freebsd-update upgrade -r 13.0-RELEASE` (where it can be any new -RELEASE version)
+ - binary updates are not available for -CURRENT, -STABLE or previously source-updated installations.
 
 
-OS/packages
+OS/packages/ports
 ---
-Search for package: ` `
+**Packages** = binary precompiled with default settings
+**Ports** = source, compiled on server, possibility to set different options
 
-Install package: ` `
+Search for package: `pkg search ${name}`
 
-Update packages: ` `
+Install package: `pkg install ${name}` (optional with parameter **-y** = yes to all confirmations)
 
-Delete package: ` `
+Update packages: `pkg upgrade` (optional with parameter **-f** = forced)
+
+Uninstall package: `pkg delete ${name}`
 
 Lock and unlock package: (to prevent update to newer versions)
 ```
+pkg lock ${name}
+pkg unlock ${name}
 ```
+
+Search for ports
 
 Disk drives
 ---
