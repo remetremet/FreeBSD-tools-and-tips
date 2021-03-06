@@ -7,6 +7,9 @@ Shutdown and poweroff: `shutdown -p now`
 
 Get size of system memory: `/sbin/sysctl -n hw.physmem`
 
+
+Disk drives
+---
 Get list of disks: `/sbin/sysctl -n kern.disks`
 
 Create disk GPT partition table: `/sbin/gpart create -s GPT ${disk}`
@@ -27,8 +30,8 @@ Check if HDD spinning: `smartctl -i -n never /dev/da0 | grep "Power mode" | awk 
 
 Put HDD into sleep mode:
 ```
-/sbin/camcontrol standby ${disk}      (for SATA/IDE controllers - adaX devices)
-/sbin/camcontrol stop ${disk}         (for SAS/SCSI controllers - daX devices)
+/sbin/camcontrol standby ${disk}      #(for SATA/IDE controllers - adaX devices)
+/sbin/camcontrol stop ${disk}         #(for SAS/SCSI controllers - daX devices)
 ```
 
 
