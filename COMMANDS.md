@@ -205,9 +205,16 @@ Get open TCP/UDP ports: `netstat -na`
 
 Set default route (gateway): `route add default 1.2.3.4`
 
+Get network stats: `netstat -w1` (in bytes, can be used **-w8** to get in bits per second)
+
+
+Firewall/IPFW2
+===
 Get IPFW rules incl. number of packets and bytes: `ipfw -a list`
 
-Get network stats: `netstat -w1` (in bytes, can be used **-w8** to get in bits per second)
+List content of table: `ipfw table ${table_name} list`
+
+Add item into table: `ipfw table ${table_name} add 0.0.0.0/32`
 
 
 Let's Encrypt
@@ -223,6 +230,13 @@ cd /etc/mail/certs
 openssl dhparam -out dh.param 4096
 cd /etc/mail && make restart
 ```
+
+Update ClamAV virus database: `freshclam`
+
+
+Zabbix
+---
+Run local agent: `zabbix_get -s127.0.0.1 -k'net.tcp.dns[SERVER]'` (for debug purposes)
 
 
 Audio/Video
