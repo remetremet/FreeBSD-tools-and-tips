@@ -9,9 +9,11 @@ Get size of system memory: `/sbin/sysctl -n hw.physmem`
 
 Shutdown and poweroff: `shutdown -p now`
 
-List of kernel modules loaded: `kldstat`
-
-Load kernel module: `kldload coretemp`
+List of kernel modules loaded and load kernel module: 
+```
+kldstat
+kldload coretemp
+```
 
 List USB devices: `/usr/sbin/usbconfig`
 
@@ -26,6 +28,19 @@ freebsd-update install
 Upgrade FreeBSD OS to newer release: (binary updates are not available for -CURRENT, -STABLE or previously source-updated installations)
 ```
 freebsd-update upgrade -r 13.0-RELEASE
+```
+
+Compile/update whole FreeBSD OS from source:
+```
+cd /usr/src
+make update
+make buildworld
+make buildkernel KERNCONF=${kernel_name}
+make installkernel KERNCONF=${kernel_name}
+shutdown -r now
+make installworld
+mergemaster -Ui
+shutdown -r now
 ```
 
 
@@ -60,12 +75,13 @@ cd /usr/ports
 make search name=${name}
 ```
 
-Compile, install and uninstall port:
+Configure, compile, install and uninstall port:
 ```
 cd /usr/ports/${path}/${name}
-make
-make install
-make deinstall
+make config       # configure port options
+make              # compile port
+make install      # install port
+make deinstall    # uninstall port
 make clean        # clean directory after compilation (to force compiling everything from source again)
 make distclean    # clean downloaded source files (to force of downloading them again)
 ```
