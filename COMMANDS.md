@@ -209,7 +209,7 @@ Get network stats: `netstat -w1` (in bytes, can be used **-w8** to get in bits p
 
 
 Firewall/IPFW2
-===
+---
 Get IPFW rules incl. number of packets and bytes: `ipfw -a list`
 
 List content of table: `ipfw table ${table_name} list`
