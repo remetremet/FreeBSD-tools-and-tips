@@ -236,7 +236,7 @@ Add item into table: `ipfw table ${table_name} add 0.0.0.0/32`
 
 Let's Encrypt
 ---
-Renew certificates: `certbot renew`
+Renew certificates: `certbot renew` (needs pkg **py37-certbot**)
 
 
 Sendmail
