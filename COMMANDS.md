@@ -23,6 +23,8 @@ Get CPU interrupt stats: `vmstat -i`
 
 Get size of system memory: `/sbin/sysctl hw.physmem`
 
+Get swap stats: `swapinfo -h`
+
 List of kernel modules loaded and load kernel module: 
 ```
 kldstat
