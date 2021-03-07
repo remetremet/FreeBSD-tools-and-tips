@@ -60,7 +60,7 @@ mergemaster -Ui
 shutdown -r now
 ```
 
-Write log message from CLI/shell via syslog: `logger <Message>`
+Write log message from CLI/shell via syslog: `logger -t <Application> -i <Message>`
 
 
 OS/packages/ports
