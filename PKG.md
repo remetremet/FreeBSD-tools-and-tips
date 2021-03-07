@@ -1,7 +1,8 @@
 Packages
 ===
 
-Basic usefull packages I install on my FreeBSD servers:
+Basic packeges on all servers
+---
 - bash
 - bash-completion
 - bind-tools
@@ -43,7 +44,7 @@ screen smartmontools sudo tcpdump tcping tcptraceroute usbutils wget zabbix52-ag
 
 
 Optional packages (DB, mail, VPN, DHCP, DNS, Zabbix, Samba, ...)
-===
+---
 - apache24
 - bind916
 - cclient
