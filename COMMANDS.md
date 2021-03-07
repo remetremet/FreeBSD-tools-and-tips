@@ -104,6 +104,10 @@ make install      # install port
 make deinstall    # uninstall port
 make clean        # clean directory after compilation (to force compiling everything from source again)
 make distclean    # clean downloaded source files (to force of downloading them again)
+
+or
+
+make install clean [BATCH=yes]  # BATCH=yes can be used to disable prompts for configuration options
 ```
 
 Update ports database:
