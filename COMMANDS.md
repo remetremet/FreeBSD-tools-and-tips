@@ -132,6 +132,15 @@ portupgrade -fr p5
 ```
 
 
+OS/users
+---
+Change user password: `passwd ${username}`
+
+Change user's shell: `chsh /usr/local/bin/bash`
+
+Update user database: `pwd_mkdb /etc/master.passwd`
+
+
 Disk drives
 ---
 Get list of disks: `/sbin/sysctl -n kern.disks` or `/sbin/camcontrol devlist`
