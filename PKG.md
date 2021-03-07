@@ -36,9 +36,9 @@ Basic usefull packages I install on my FreeBSD servers:
 - wget
 - zabbix52-agent
 ```
-pkg install -y bash bash-completion bind-tools bsdstats ca_root_nss curl dhcpdump fping git iftop
-pkg install -y iperf3 iso-codes joe links lsof lynx mc nmap openssl pciids pciutils perl5 python37 rsync
-pkg install -y screen smartmontools sudo tcpdump tcping tcptraceroute usbutils wget zabbix52-agent
+pkg install bash bash-completion bind-tools bsdstats ca_root_nss curl dhcpdump fping git iftop \
+iperf3 iso-codes joe links lsof lynx mc nmap openssl pciids pciutils perl5 python37 rsync \
+screen smartmontools sudo tcpdump tcping tcptraceroute usbutils wget zabbix52-agent
 ```
 
 
