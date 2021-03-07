@@ -83,7 +83,7 @@ pkg lock ${name}
 pkg unlock ${name}
 ```
 
-Update package database: `pkg update`
+Update package database: `pkg update [-f]` (optional with parameter **-f** = forced)
 
 Update packages: `pkg upgrade [-f]` (optional with parameter **-f** = forced)
 
