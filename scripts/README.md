@@ -1,5 +1,6 @@
 Scripts
 ===
+ - **generate-openvpn-client-config.sh** - Generates client configuration (inl. certs)
  - **generate-dkim.sh** - Generates certificate of <domain> for DKIM
  - **mbuf_autotune.sh** - Calculates optimal mbuf settings for server
  - **search-and-replace.php** - Search and replace text in files
