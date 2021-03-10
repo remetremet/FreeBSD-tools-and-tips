@@ -263,6 +263,13 @@ Let's Encrypt
 Renew certificates: `certbot renew` (needs pkg **py37-certbot**)
 
 
+OpenSSL
+---
+Create self-signed cert: `openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365`
+
+Remove password from SSL key: `openssl rsa -in www.key -out new.key`
+
+
 Sendmail
 ---
 Generate missing **dh.param** for Sendmail:
