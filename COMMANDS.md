@@ -143,6 +143,12 @@ Stop service: `service ${servicename} stop`
 
 Restart service: `service ${servicename} restart`
 
+Change /etc/rc.conf to start service automaticly:
+```
+sysrc ${servicename}_enable="YES"
+sysrc ${servicename}_configfile="/usr/local/etc/${servicename}.conf"
+```
+
 
 OS/users
 ---
@@ -268,6 +274,35 @@ OpenSSL
 Create self-signed cert: `openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365`
 
 Remove password from SSL key: `openssl rsa -in www.key -out new.key`
+
+
+OpenVPN
+---
+Create server cert:
+```
+cp -r /usr/local/share/easy-rsa /usr/local/etc/openvpn/easy-rsa
+cd /usr/local/etc/openvpn/easy-rsa
+joe vars
+source vars
+./easyrsa.real init-pki
+./easyrsa.real gen-dh
+./easyrsa.real build-ca
+./easyrsa.real build-server-full server
+cp /usr/local/etc/openvpn/easy-rsa/pki/dh.pem /usr/local/etc/openvpn/dh2048.pem
+cp /usr/local/etc/openvpn/easy-rsa/pki/ca.crt /usr/local/etc/openvpn
+cp /usr/local/etc/openvpn/easy-rsa/pki/private/server.key /usr/local/etc/openvpn
+cp /usr/local/etc/openvpn/easy-rsa/pki/issued/server.crt /usr/local/etc/openvpn
+```
+
+Create TLS key: `openvpn --genkey --secret /usr/local/etc/openvpn/ta.key`
+
+Remove password from private key: `openssl rsa -in /usr/local/etc/openvpn/server.key -out /usr/local/etc/openvpn/server.key`
+
+Generate client cert:
+```
+cd /usr/local/etc/openvpn/easy-rsa
+./easyrsa.real build-client-full client1
+```
 
 
 Sendmail
