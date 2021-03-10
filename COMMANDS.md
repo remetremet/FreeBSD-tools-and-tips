@@ -64,6 +64,10 @@ shutdown -r now
 
 Write log message from CLI/shell via syslog: `logger -t ${application} -i ${message}`
 
+Process monitoring: `top`
+
+System stats: `systat`
+
 
 OS/packages/ports
 ---
@@ -133,14 +137,28 @@ portupgrade -o lang/perl5.20 -f perl5.16
 portupgrade -fr p5
 ```
 
+Start service: `service ${servicename} start`
+
+Stop service: `service ${servicename} stop`
+
+Restart service: `service ${servicename} restart`
+
 
 OS/users
 ---
+Add user: `adduser`
+
 Change user password: `passwd ${username}`
 
 Change user's shell: `chsh /usr/local/bin/bash`
 
+Users file: `/etc/passwd`
+
+Users secret file: `/etc/master.passwd`
+
 Update user database: `pwd_mkdb /etc/master.passwd`
+
+Group file: `/etc/group`
 
 
 Disk drives
@@ -216,11 +234,17 @@ Network
 ---
 Get network interface status: `ifconfig`
 
+Set network interface: `ifconfig ${interface} inet ${ipaddress} netmask ${netmask}`
+
+Set network interface alias: `ifconfig ${interface} inet ${ipaddress} netmask ${netmask} alias`
+
+Delete network interface alias: `ifconfig ${interface} inet ${ipaddress} netmask ${netmask} -alias`
+
 Get routing table: `netstat -nr`
 
 Get open TCP/UDP ports: `netstat -na`
 
-Set default route (gateway): `route add default 1.2.3.4`
+Set default route (gateway): `route add -net default 1.2.3.4`
 
 Get network stats: `netstat -w1` (in bytes, can be used **-w8** to get in bits per second)
 
