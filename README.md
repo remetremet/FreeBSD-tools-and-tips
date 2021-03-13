@@ -1,5 +1,5 @@
 # FreeBSD-tools-and-tips
-Tools, scripts and tips I'n using administering FreeBSD servers.
+Tools, scripts and tips I'm using administering FreeBSD servers.
 
 
 List of usefull CLI/shell commands: [COMMANDS.md](COMMANDS.md)
