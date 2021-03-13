@@ -8,6 +8,7 @@ List of packages to install: [PACKAGES.md](PACKAGES.md)
 
 Tips about FreeBSD: [TIPS.md](TIPS.md)
 
+List of common TCP, UDP and SCTP ports: [TCP-UDP-ports.md](TCP-UDP-ports.md)
 
 Future
 ---
