@@ -10,6 +10,12 @@ Tips about FreeBSD: [TIPS.md](TIPS.md)
 
 List of common TCP, UDP and SCTP ports: [TCP-UDP-ports.md](TCP-UDP-ports.md)
 
+
+# Other OS, tools and tips
+
+Check usefull cheat sheets I collect from the Internet: [downloaded-cheat-sheets](downloaded-cheat-sheets)
+
+
 Future
 ---
  - add usefull scripts for better FreeBSD administration.
