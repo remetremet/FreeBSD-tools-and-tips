@@ -264,8 +264,12 @@ List content of table: `ipfw table ${table_name} list`
 Add item into table: `ipfw table ${table_name} add 0.0.0.0/32`
 
 
-Let's Encrypt
+Let's Encrypt (needs pkg **py37-certbot**)
 ---
+Create certificate: `certbot --email address@domain.com --agree-tos --manual-public-ip-logging-ok -d "domain.com" -d "*.domain.com" --manual --preferred-challenges dns certonly`
+
+Line to add to authoritative DNS zone: `_acme-challenge         IN      300     TXT     vgZn1G26PK5Btvh9f14-xHRI8KwnPf3BWe8Q8r1wS23`
+
 Renew certificates: `certbot renew` (needs pkg **py37-certbot**)
 
 
