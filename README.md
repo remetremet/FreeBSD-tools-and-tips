@@ -2,7 +2,7 @@
 Tools, scripts and tips I'm using administering FreeBSD servers.
 
 
-List of usefull CLI/shell commands: [COMMANDS.md](COMMANDS.md)
+List of usefull CLI/shell commands: [FreeBSD-cheat-sheet.md](FreeBSD-cheat-sheet.md)
 
 List of packages to install: [PACKAGES.md](PACKAGES.md)
 
