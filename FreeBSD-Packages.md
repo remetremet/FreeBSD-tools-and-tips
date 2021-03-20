@@ -74,7 +74,7 @@ pkg install apache24 mod_php74 nginx php74 portupgrade
 ```
 
 
-Optional packages (mail)
+Optional packages (Mail)
 ---
 - cclient
 - clamav
@@ -94,7 +94,7 @@ procmail sendmail spamass-milter spamassassin
 ```
 
 
-Optional packages (router)
+Optional packages (Router)
 ---
 - bind916
 - isc-dhcp44-server
