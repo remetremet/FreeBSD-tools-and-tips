@@ -1,7 +1,7 @@
-Packages
+Packages I use and recomend to use on every FreeBSD server
 ===
 
-Basic packeges on all servers
+Essential packeges on all servers
 ---
 - bash
 - bash-completion
