@@ -1,4 +1,4 @@
-Packages I use and recomend to use on every FreeBSD server
+Packages I use and I recomend to use on every FreeBSD server
 ===
 
 Essential packeges on all servers
@@ -123,6 +123,7 @@ Optional packages (DNS, Zabbix, Samba, ...)
 ---
 - bind916
 - ffmpeg
+- libcoap
 - mediatomb
 - mosquitto
 - net-snmp
@@ -139,6 +140,7 @@ Optional packages (DNS, Zabbix, Samba, ...)
 - zabbix52-proxy
 - zabbix52-server
 ```
-pkg install bind916 ffmpeg mediatomb mosquitto net-snmp nut openipmi portupgrade py37-certbot py37-certbot-dns-rfc2136\
-py37-pip py37-speedtest-cli samba411 ser2net zabbix52-frontend zabbix52-proxy zabbix52-server
+pkg install bind916 ffmpeg libcoap mediatomb mosquitto net-snmp nut openipmi portupgrade py37-certbot\
+py37-certbot-dns-rfc2136 py37-pip py37-speedtest-cli samba411 ser2net zabbix52-frontend zabbix52-proxy\
+zabbix52-server
 ```
