@@ -167,6 +167,39 @@ Update user database: `pwd_mkdb /etc/master.passwd`
 Group file: `/etc/group`
 
 
+OS/files
+---
+Compare two directories by file size and MD5 checksum:
+```
+cd ${dir1} && mtree -R all -c -k size,md5 > /tmp/.mtree
+cd ${dir2} && mtree -f /tmp/.mtree
+```
+
+
+GELI (disk encryption)
+---
+Create random keyfile: `/bin/dd if=/dev/random of=${keyfile} bs=6597 count=123` (creates key of size 6597*123= 811431 bytes)
+
+Create GELI encrypted partition: `/sbin/geli init -K ${keyfile} -J -s 4096 -l 256 ${disk}${partition}` (incl. 4K alignment)
+
+Attaching GELI encrypted partition: `/sbin/geli attach -k ${keyfile} -j ${disk}${partition}` (creates new device **${disk}${partition}.eli**)
+
+Detaching GELI encrypted partition: `/sbin/geli detach ${disk}${partition}.eli`
+
+
+File crypting
+---
+Encrypt file with AES256:
+```
+/usr/local/bin/openssl enc -aes256 -pass pass:"${password}" -salt -in "${filename}" -out "${crypted_filename}" -e
+```
+
+Decrypt file with AES256:
+```
+/usr/local/bin/openssl enc -aes256 -pass pass:"${password}" -salt -in "${crypted_filename}" -out "${output_filename}" -d
+```
+
+
 Disk drives
 ---
 Get list of disks: `/sbin/sysctl -n kern.disks` or `/sbin/camcontrol devlist`
@@ -209,30 +242,6 @@ Destroy memory disk:
 ```
 /sbin/umount -f /dev/md0
 /sbin/mdconfig -d -u 0
-```
-
-
-GELI (disk encryption)
----
-Create random keyfile: `/bin/dd if=/dev/random of=${keyfile} bs=6597 count=123` (creates key of size 6597*123= 811431 bytes)
-
-Create GELI encrypted partition: `/sbin/geli init -K ${keyfile} -J -s 4096 -l 256 ${disk}${partition}` (incl. 4K alignment)
-
-Attaching GELI encrypted partition: `/sbin/geli attach -k ${keyfile} -j ${disk}${partition}` (creates new device **${disk}${partition}.eli**)
-
-Detaching GELI encrypted partition: `/sbin/geli detach ${disk}${partition}.eli`
-
-
-File crypting
----
-Encrypt file with AES256:
-```
-/usr/local/bin/openssl enc -aes256 -pass pass:"${password}" -salt -in "${filename}" -out "${crypted_filename}" -e
-```
-
-Decrypt file with AES256:
-```
-/usr/local/bin/openssl enc -aes256 -pass pass:"${password}" -salt -in "${crypted_filename}" -out "${output_filename}" -d
 ```
 
 
