@@ -167,12 +167,12 @@ Update user database: `pwd_mkdb /etc/master.passwd`
 Group file: `/etc/group`
 
 
-OS/files
+OS/Files
 ---
 Compare two directories by file size and MD5 checksum:
 ```
-cd ${dir1} && mtree -R all -c -k size,md5 > /tmp/.mtree
-cd ${dir2} && mtree -f /tmp/.mtree
+mtree -p ${dir1} -R all -k size,md5 -c > /tmp/.mtree
+mtree -p ${dir2} -f /tmp/.mtree
 ```
 
 
