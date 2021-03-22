@@ -121,12 +121,12 @@ pkg install bind916 easy-rsa isc-dhcp44-server openvpn portupgrade unbound
 
 Optional packages (DNS, Zabbix, Samba, ...)
 ---
-- bind916
-- ffmpeg
+- `bind916` - Authoritative DNS
+- `ffmpeg` - DLNA
 - `libcoap` - Ikea Tradfri communication
-- mediatomb
-- mosquitto
-- net-snmp
+- `mediatomb` - DLNA
+- `mosquitto` - IOT
+- `net-snmp` - Network monitoring
 - `nut` - UPS monitoring
 - openipmi
 - portupgrade
@@ -134,11 +134,11 @@ Optional packages (DNS, Zabbix, Samba, ...)
 - `py37-certbot-dns-rfc2136` - Let's Encrypt
 - py37-pip
 - `py37-speedtest-cli` - Ookla's speedtest client
-- samba411
-- ser2net
-- zabbix52-frontend
-- zabbix52-proxy
-- zabbix52-server
+- `samba411` - SMB file sharing
+- `ser2net` - RS232 communication over IP
+- `zabbix52-frontend` - Zabbix
+- `zabbix52-proxy` - Zabbix
+- `zabbix52-server` - Zabbix
 ```
 pkg install bind916 ffmpeg libcoap mediatomb mosquitto net-snmp nut openipmi portupgrade py37-certbot\
 py37-certbot-dns-rfc2136 py37-pip py37-speedtest-cli samba411 ser2net zabbix52-frontend zabbix52-proxy\
