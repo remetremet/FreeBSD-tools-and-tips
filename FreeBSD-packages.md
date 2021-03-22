@@ -123,17 +123,17 @@ Optional packages (DNS, Zabbix, Samba, ...)
 ---
 - bind916
 - ffmpeg
-- libcoap
+- `libcoap` - Ikea Tradfri communication
 - mediatomb
 - mosquitto
 - net-snmp
-- nut
+- `nut` - UPS monitoring
 - openipmi
 - portupgrade
-- py37-certbot
-- py37-certbot-dns-rfc2136
+- `py37-certbot` - Let's Encrypt
+- `py37-certbot-dns-rfc2136` - Let's Encrypt
 - py37-pip
-- py37-speedtest-cli
+- `py37-speedtest-cli` - Ookla's speedtest client
 - samba411
 - ser2net
 - zabbix52-frontend
