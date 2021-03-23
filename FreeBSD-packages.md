@@ -49,7 +49,7 @@ python37 rsync screen smartmontools sudo tcpdump tcping tcptraceroute tuptime us
 ```
 
 
-Optional packages (DB)
+Optional packages for DB server (MariaDB, MySQL, SQLite)
 ---
 - `mariadb104-client`
 - `mariadb104-server`
@@ -63,7 +63,7 @@ pkg install mariadb104-client mariadb104-server mysql57-client mysql57-server my
 ```
 
 
-Optional packages (Web)
+Optional packages for Web server (Apache, Nginx, PHP)
 ---
 - `apache24`
 - `mod_php74`
@@ -75,7 +75,7 @@ pkg install apache24 mod_php74 nginx php74 portupgrade
 ```
 
 
-Optional packages (Mail)
+Optional packages for Mail server (TLS, Auth, AV, DKIM, AntiSpam, Greylist, IMAP, POP3)
 ---
 - `cclient`
 - `clamav`
@@ -95,7 +95,7 @@ procmail sendmail spamass-milter spamassassin
 ```
 
 
-Optional packages (Router)
+Optional packages for Router (DHCP)
 ---
 - `isc-dhcp44-server`
 - `net-snmp`
@@ -106,7 +106,7 @@ pkg install isc-dhcp44-server net-snmp portupgrade unbound
 ```
 
 
-Optional packages (VPN)
+Optional packages for VPN server (OpenVPN, DHCP, caching DNS)
 ---
 - `easy-rsa`
 - `isc-dhcp44-server`
@@ -118,7 +118,7 @@ pkg install easy-rsa isc-dhcp44-server openvpn portupgrade unbound
 ```
 
 
-Optional packages (DNS, Zabbix, Samba, ...)
+Optional packages for DNS, Zabbix, Samba, Multimedia, ...
 ---
 - `bind916` - Authoritative DNS
 - `ffmpeg` - DLNA
