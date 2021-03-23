@@ -3,60 +3,61 @@ Packages I use and I recomend to use on every FreeBSD server
 
 Essential packeges on all servers
 ---
-- bash
-- bash-completion
-- bind-tools
-- bsdstats
-- ca_root_nss
-- curl
-- ddrescue
-- dhcpdump
-- dmidecode
-- flashrom
-- fping
-- gawk
-- git
-- iftop
-- iperf3
-- iso-codes
-- joe
-- links
-- lsof
-- lynx
-- mc
-- nmap
-- openssl
-- pciids
-- pciutils
-- perl5
-- python37
-- rsync
-- screen
-- smartmontools
-- sudo
-- tcpdump
-- tcping
-- tcptraceroute
-- tuptime
-- usbutils
-- wget
-- zabbix52-agent
+- `bash`
+- `bash-completion`
+- `bind-tools`
+- `bsdstats`
+- `ca_root_nss`
+- `curl`
+- `ddrescue`
+- `dhcpdump`
+- `dmidecode`
+- `fdupes`
+- `flashrom`
+- `fping`
+- `gawk`
+- `git`
+- `iftop`
+- `iperf3`
+- `iso-codes`
+- `joe`
+- `links`
+- `lsof`
+- `lynx`
+- `mc`
+- `nmap`
+- `openssl`
+- `pciids`
+- `pciutils`
+- `perl5`
+- `python37`
+- `rsync`
+- `screen`
+- `smartmontools`
+- `sudo`
+- `tcpdump`
+- `tcping`
+- `tcptraceroute`
+- `tuptime`
+- `usbutils`
+- `wget`
+- `zabbix52-agent`
 ```
 pkg install bash bash-completion bind-tools bsdstats ca_root_nss curl ddrescue dhcpdump dmidecode \
-flashrom fping gawk git iftop iperf3 iso-codes joe links lsof lynx mc nmap openssl pciids pciutils perl5 \
+fdupes flashrom fping gawk git iftop iperf3 iso-codes joe links lsof lynx mc nmap openssl pciids pciutils perl5 \
 python37 rsync screen smartmontools sudo tcpdump tcping tcptraceroute tuptime usbutils wget zabbix52-agent
 ```
 
 
 Optional packages (DB)
 ---
-- mariadb104-client
-- mariadb104-server
-- mysql57-client
-- mysql57-server
-- mysqltuner
-- portupgrade
-- sqlite3
+- `mariadb104-client`
+- `mariadb104-server`
+- `mysql57-client`
+- `mysql57-server`
+- `mysqltuner`
+- `portupgrade`
+- `sqlite3`
 ```
 pkg install mariadb104-client mariadb104-server mysql57-client mysql57-server mysqltuner portupgrade sqlite3
 ```
@@ -64,11 +65,11 @@ pkg install mariadb104-client mariadb104-server mysql57-client mysql57-server my
 
 Optional packages (Web)
 ---
-- apache24
-- mod_php74
-- nginx
-- php74
-- portupgrade
+- `apache24`
+- `mod_php74`
+- `nginx`
+- `php74`
+- `portupgrade`
 ```
 pkg install apache24 mod_php74 nginx php74 portupgrade
 ```
@@ -76,18 +77,18 @@ pkg install apache24 mod_php74 nginx php74 portupgrade
 
 Optional packages (Mail)
 ---
-- cclient
-- clamav
-- cyrus-sasl-saslauthd
-- imap-uw
-- maildrop
-- milter-greylist
-- opendkim
-- portupgrade
-- procmail
-- sendmail
-- spamass-milter
-- spamassassin
+- `cclient`
+- `clamav`
+- `cyrus-sasl-saslauthd`
+- `imap-uw`
+- `maildrop`
+- `milter-greylist`
+- `opendkim`
+- `portupgrade`
+- `procmail`
+- `sendmail`
+- `spamass-milter`
+- `spamassassin`
 ```
 pkg install cclient clamav cyrus-sasl-saslauthd imap-uw maildrop milter-greylist opendkim portupgrade \
 procmail sendmail spamass-milter spamassassin
@@ -96,26 +97,24 @@ procmail sendmail spamass-milter spamassassin
 
 Optional packages (Router)
 ---
-- bind916
-- isc-dhcp44-server
-- net-snmp
-- portupgrade
-- unbound
+- `isc-dhcp44-server`
+- `net-snmp`
+- `portupgrade`
+- `unbound`
 ```
-pkg install bind916 isc-dhcp44-server net-snmp portupgrade unbound
+pkg install isc-dhcp44-server net-snmp portupgrade unbound
 ```
 
 
 Optional packages (VPN)
 ---
-- bind916
-- easy-rsa
-- isc-dhcp44-server
-- openvpn
-- portupgrade
-- unbound
+- `easy-rsa`
+- `isc-dhcp44-server`
+- `openvpn`
+- `portupgrade`
+- `unbound`
 ```
-pkg install bind916 easy-rsa isc-dhcp44-server openvpn portupgrade unbound
+pkg install easy-rsa isc-dhcp44-server openvpn portupgrade unbound
 ```
 
 
@@ -128,11 +127,11 @@ Optional packages (DNS, Zabbix, Samba, ...)
 - `mosquitto` - IOT
 - `net-snmp` - Network monitoring
 - `nut` - UPS monitoring
-- openipmi
-- portupgrade
+- `openipmi`
+- `portupgrade`
 - `py37-certbot` - Let's Encrypt
 - `py37-certbot-dns-rfc2136` - Let's Encrypt
-- py37-pip
+- `py37-pip`
 - `py37-speedtest-cli` - Ookla's speedtest client
 - `samba411` - SMB file sharing
 - `ser2net` - RS232 communication over IP
