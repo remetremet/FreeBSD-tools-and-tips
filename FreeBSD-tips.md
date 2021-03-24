@@ -12,4 +12,9 @@ Just few tips
 Strange problems
 ===
 - OS upgrade end with `/usr/sbin/freebsd-update: cannot open files/.gz: No such file or directory` - the problem is mixed versions of some files in your system (cheksum mismatch) probably caused by messed up/interrupted upgrade before - the only 100% working solution is to reinstall OS
-
+- Power management (`powerd`) may end with error **powerd: no cpufreq(4) support** on some older CPUs. Easy solution is to add this 
+```
+hint.acpi_throttle.0.disabled="0"
+hint.p4tcc.0.disabled="0"
+```
+into /boot/loader.conf 
