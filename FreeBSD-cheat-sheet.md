@@ -225,6 +225,12 @@ Destroy memory disk:
 
 ZFS
 ---
+Optimal number of disks for ZFS:
+```
+RAIDZ1 3, 5, 9
+RAIDZ2 4, 6, 10
+RAIDZ3 5, 7, 11
+```
 
 
 GELI (disk encryption)
