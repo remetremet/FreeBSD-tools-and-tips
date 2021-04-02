@@ -75,6 +75,8 @@ OS/packages/ports
 
 **Ports** = source, compiled on server, possibility to set different options
 
+Get package system: `pkg bootstrap -f`
+
 Search for package: `pkg search ${name}`
 
 Install and uninstall package: (optional with parameter **-y** = yes to all confirmations)
@@ -94,6 +96,8 @@ Update package database: `pkg update [-f]` (optional with parameter **-f** = for
 Update packages: `pkg upgrade [-f]` (optional with parameter **-f** = forced)
 
 List of installed packages: `pkg info`
+
+Get ports (for the first time): `portsnap fetch extract`
 
 Search for ports:
 ```
