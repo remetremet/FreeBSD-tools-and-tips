@@ -171,7 +171,7 @@ Update user database: `pwd_mkdb /etc/master.passwd`
 Group file: `/etc/group`
 
 
-OS/Files
+OS/files
 ---
 Compare two directories by file size and MD5 checksum:
 ```
