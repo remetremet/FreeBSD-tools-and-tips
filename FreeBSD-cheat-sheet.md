@@ -236,6 +236,21 @@ RAIDZ2 4, 6, 10
 RAIDZ3 5, 7, 11
 ```
 
+Create ZFS RAIDZ1: `zpool create ${poolname} raidz1 ${device1} ${device2} ${device3}`
+
+Create ZFS RAIDZ2: `zpool create ${poolname} raidz2 ${device1} ${device2} ${device3} ${device4}`
+
+Destroy ZFS pool: `zpool destroy ${poolname}`
+
+Set compression to ZFS pool: `zfs set compression=lz4 ${poolname}`
+
+Health check:
+```
+zfs list
+zpool list
+zpool status
+```
+
 
 GELI (disk encryption)
 ---
