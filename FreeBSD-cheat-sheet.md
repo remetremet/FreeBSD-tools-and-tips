@@ -271,6 +271,8 @@ Set network interface alias: `ifconfig ${interface} inet ${ipaddress} netmask ${
 
 Delete network interface alias: `ifconfig ${interface} inet ${ipaddress} netmask ${netmask} -alias`
 
+Create VLAN interface: `ifconfig vlan111 inet 192.168.111.111/24 vlan 111 vlandev ${physical_interface}`
+
 Get routing table: `netstat -nr`
 
 Get open TCP/UDP ports: `netstat -na`
