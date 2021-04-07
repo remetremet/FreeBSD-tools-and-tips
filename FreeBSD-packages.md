@@ -51,8 +51,8 @@ python37 rsync screen smartmontools sudo tcpdump tcping tcptraceroute tuptime us
 
 Optional packages for DB server (MariaDB, MySQL, SQLite)
 ---
-- `mariadb104-client` (**pkg lock recommended**)
-- `mariadb104-server` (**pkg lock recommended**)
+- `mariadb104-client` (**`pkg lock` recommended**)
+- `mariadb104-server` (**`pkg lock` recommended**)
 - `mysql57-client`
 - `mysql57-server`
 - `mysqltuner`
