@@ -182,6 +182,22 @@ mtree -p ${dir2} -f /tmp/.mtree
 Copy files or block devices: `dd if=${input_device} of=${output_device} bs=4{block_size} count=${number_of_blocks} [status=progress]`
 
 
+OS/benchmarks
+---
+CPU benchmark: `sysbench --test=cpu --cpu-max-prime=20000 run` (needs pkg **sysbench**)
+
+CPU floating point benchmark: `flops` (needs pkg **flops**)
+
+File system benchmark: `bonnie++ -d /home -s32G -n4 -f -b -u ${user} -c4` (needs pkg **bonnie++**)
+
+File system IO benchmark: (needs pkg **sysbench**)
+```
+sysbench --test=fileio --file-total-size=50G prepare
+sysbench --test=fileio --file-total-size=50G --file-test-mode=rndrw --max-time=300 --max-requests=0 run
+sysbench --test=fileio --file-total-size=50G cleanup
+```
+
+
 Disk drives
 ---
 Get list of disks: `/sbin/sysctl -n kern.disks` or `/sbin/camcontrol devlist`
