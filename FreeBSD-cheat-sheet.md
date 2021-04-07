@@ -280,21 +280,27 @@ Network
 ---
 Get network interface status: `ifconfig`
 
-Set network interface: `ifconfig ${interface} inet ${ipaddress} netmask ${netmask}`
+Set IPv4 network interface: `ifconfig ${interface} inet ${ipaddress} netmask ${netmask}`
 
-Set network interface alias: `ifconfig ${interface} inet ${ipaddress} netmask ${netmask} alias`
+Set IPv6 network interface: `ifconfig ${interface} inet6 ${ipaddress} prefixlen ${prefixlen}`
 
-Delete network interface alias: `ifconfig ${interface} inet ${ipaddress} netmask ${netmask} -alias`
+Set IPv4 network interface alias: `ifconfig ${interface} inet ${ipaddress} netmask ${netmask} alias`
 
-Create VLAN interface: `ifconfig vlan111 inet 192.168.111.111/24 vlan 111 vlandev ${physical_interface}`
+Delete IPv4 network interface alias: `ifconfig ${interface} inet ${ipaddress} netmask ${netmask} -alias`
+
+Create IPv4 VLAN interface: `ifconfig vlan111 inet ${ipaddress} netmask ${netmask} vlan ${vlan_id} vlandev ${physical_interface}`
 
 Get routing table: `netstat -nr`
 
 Get open TCP/UDP ports: `netstat -na`
 
-Set default route (gateway): `route add -net default 1.2.3.4`
+Set default IPv4 route (gateway): `route add -net default 1.2.3.4`
 
-Get network stats: `netstat -w1` (in bytes, can be used **-w8** to get in bits per second)
+Set default IPv6 route (gateway): `route -6 add -net default 1111:2222:3333::ffff`
+
+Get network traffic stats: `netstat -w1` (in bytes, use **-w8** instead to get in bps)
+
+Prevent /etc/resolv.conf of beeing rewritten by DHCP client: `chflags schg /etc/resolv.conf`
 
 
 Firewall/IPFW2
@@ -304,6 +310,8 @@ Get IPFW rules incl. number of packets and bytes: `ipfw -a list`
 List content of table: `ipfw table ${table_name} list`
 
 Add item into table: `ipfw table ${table_name} add 0.0.0.0/32`
+
+Reload IPFW remotly: `sh /etc/rc.firewall &`
 
 
 Let's Encrypt (needs pkg **py37-certbot**)
