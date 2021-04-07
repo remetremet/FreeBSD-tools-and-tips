@@ -51,8 +51,8 @@ python37 rsync screen smartmontools sudo tcpdump tcping tcptraceroute tuptime us
 
 Optional packages for DB server (MariaDB, MySQL, SQLite)
 ---
-- `mariadb104-client`
-- `mariadb104-server`
+- `mariadb104-client` (**pkg lock recommended**)
+- `mariadb104-server` (**pkg lock recommended**)
 - `mysql57-client`
 - `mysql57-server`
 - `mysqltuner`
@@ -86,7 +86,7 @@ Optional packages for Mail server (TLS, Auth, AV, DKIM, AntiSpam, Greylist, IMAP
 - `opendkim`
 - `portupgrade`
 - `procmail`
-- `sendmail`
+- `sendmail` (**ports compiled version possibly needed for all the features**)
 - `spamass-milter`
 - `spamassassin`
 ```
@@ -95,7 +95,7 @@ procmail sendmail spamass-milter spamassassin
 ```
 
 
-Optional packages for Router (DHCP)
+Optional packages for Router (DHCP, DHCPv6)
 ---
 - `isc-dhcp44-server`
 - `net-snmp`
@@ -121,7 +121,11 @@ pkg install easy-rsa isc-dhcp44-server openvpn portupgrade unbound
 Optional packages for DNS, Zabbix, Samba, Multimedia, ...
 ---
 - `bind916` - Authoritative DNS
+- `bonnie++` - File system benchmark
 - `ffmpeg` - DLNA
+- `fusefs-exfat` - exFAT support
+- `fusefs-ntfs` - MS Windows NTFS support
+- `fusefs-ext2` - Linux ext2/3/4 support
 - `libcoap` - Ikea Tradfri communication
 - `mediatomb` - DLNA
 - `mosquitto` - IOT
@@ -135,11 +139,12 @@ Optional packages for DNS, Zabbix, Samba, Multimedia, ...
 - `py37-speedtest-cli` - Ookla's speedtest client
 - `samba411` - SMB file sharing
 - `ser2net` - RS232 communication over IP
+- `sysbench` - CPU/file system/SQL benchmark (**ports compiled version needed for MariaDB**)
 - `zabbix52-frontend` - Zabbix
 - `zabbix52-proxy` - Zabbix
-- `zabbix52-server` - Zabbix
+- `zabbix52-server` - Zabbix (**ports compiled version needed for MariaDB**)
 ```
-pkg install bind916 ffmpeg libcoap mediatomb mosquitto net-snmp nut openipmi portupgrade py37-certbot\
-py37-certbot-dns-rfc2136 py37-pip py37-speedtest-cli samba411 ser2net zabbix52-frontend zabbix52-proxy\
-zabbix52-server
+pkg install bind916 ffmpeg fusefs-exfat fusefs-ntfs fusefs-ext2 libcoap mediatomb mosquitto net-snmp nut\
+openipmi portupgrade py37-certbot py37-certbot-dns-rfc2136 py37-pip py37-speedtest-cli samba411 ser2net\
+zabbix52-frontend zabbix52-proxy zabbix52-server
 ```
