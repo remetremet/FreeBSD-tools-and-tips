@@ -181,6 +181,8 @@ mtree -p ${dir2} -f /tmp/.mtree
 
 Copy files or block devices: `dd if=${input_device} of=${output_device} bs=4{block_size} count=${number_of_blocks} [status=progress]`
 
+Fast create empty file of any size: `dd if=/dev/zero of=${filename} bs=1 seek=${size} count=1` (size can be 16384, 128k, 16M, 1G, ...)
+
 
 OS/benchmarks
 ---
