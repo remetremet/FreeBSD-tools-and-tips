@@ -204,21 +204,21 @@ Disk drives
 ---
 Get list of disks: `/sbin/sysctl -n kern.disks` or `/sbin/camcontrol devlist`
 
-Create disk GPT partition table: `/sbin/gpart create -s GPT ${disk}`
+Create disk GPT partition table: `/sbin/gpart create -s GPT ${device}`
 
-Create disk MBR partition table: `/sbin/gpart create -s MBR ${disk}`
+Create disk MBR partition table: `/sbin/gpart create -s MBR ${device}`
 
-Delete disk partition table: `/sbin/gpart destroy -F ${disk}`
+Delete disk partition table: `/sbin/gpart destroy -F ${device}`
 
-Add disk partition: `/sbin/gpart add -t freebsd-ufs -b 128 -a 4k ${drive}` (incl. 4K alignment)
+Add disk partition: `/sbin/gpart add -t freebsd-ufs -b 128 -a 4k ${device}` (incl. 4K alignment)
 
-Delete disk partition: `/sbin/gpart delete -i ${partition} ${disk}`
+Delete disk partition: `/sbin/gpart delete -i ${partition} ${device}`
 
-Format disk partition: `/sbin/newfs -S4096 -b32768 -f4096 -O2 -U -m 0 /dev/${disk}${partition}` (incl. 4K alignment)
+Format disk partition: `/sbin/newfs -S4096 -b32768 -f4096 -O2 -U -m 0 ${device}` (incl. 4K alignment and zero reserved space)
 
-Mounting disk partition: `/sbin/mount -o noatime,rw /dev/${disk}${partition} ${path}`
+Mounting disk partition: `/sbin/mount -o noatime,rw ${device} ${path}`
 
-Check if HDD spinning: `smartctl -i -n never /dev/da0 | grep "Power mode" | awk '{ print $4 }'` (needs pkg **smartmontools**)
+Check if HDD spinning: `smartctl -i -n never ${device} | grep "Power mode" | awk '{ print $4 }'` (needs pkg **smartmontools**)
 
 Put HDD into sleep mode:
 ```
@@ -227,6 +227,8 @@ Put HDD into sleep mode:
 ```
 
 HDD/SSD/other devices stats: `iostat -w1` (in bytes per second)
+
+Change UFS (file system) parameters: `tunefs [-m <minfree>] [-t <trim>] ${device}` (minfree is reserved space in percent, default is 8%, trim is enable/disable)
 
 
 Memory disk
