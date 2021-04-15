@@ -77,7 +77,7 @@ OS/packages/ports
 
 Get package system: `pkg bootstrap -f`
 
-Search for package: `pkg search ${name}`
+Search for package: `pkg search [-o] ${name}` (optional with parameter **-o** = show ports tree path)
 
 Install and uninstall package: (optional with parameter **-y** = yes to all confirmations)
 ```
