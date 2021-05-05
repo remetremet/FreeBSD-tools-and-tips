@@ -127,6 +127,7 @@ Optional packages for DNS, Zabbix, Samba, Multimedia, ...
 - `fusefs-ntfs` - MS Windows NTFS support
 - `fusefs-ext2` - Linux ext2/3/4 support
 - `libcoap` - Ikea Tradfri communication
+- `libidn2`
 - `mediatomb` - DLNA
 - `mosquitto` - IOT
 - `net-snmp` - Network monitoring
@@ -136,10 +137,11 @@ Optional packages for DNS, Zabbix, Samba, Multimedia, ...
 - `py37-certbot` - Let's Encrypt
 - `py37-certbot-dns-rfc2136` - Let's Encrypt
 - `py37-pip`
-- `py37-speedtest-cli` - Ookla's speedtest client
+- `py37-speedtest-cli` - Ookla's speedtest unofficial client
 - `samba413` - SMB file sharing
 - `ser2net` - RS232 communication over IP
 - `sysbench` - CPU/file system/SQL benchmark (**ports compiled version needed for MariaDB**)
+- `wordpress`
 - `zabbix52-frontend` - Zabbix
 - `zabbix52-proxy` - Zabbix
 - `zabbix52-server` - Zabbix (**ports compiled version needed for MariaDB**)
@@ -147,4 +149,8 @@ Optional packages for DNS, Zabbix, Samba, Multimedia, ...
 pkg install bind916 ffmpeg fusefs-exfat fusefs-ntfs fusefs-ext2 libcoap mediatomb mosquitto net-snmp nut\
 openipmi portupgrade py37-certbot py37-certbot-dns-rfc2136 py37-pip py37-speedtest-cli samba413 ser2net\
 zabbix52-frontend zabbix52-proxy zabbix52-server
+```
+- official Ookla's speedtest client
+```
+pkg add "https://bintray.com/ookla/download/download_file?file_path=ookla-speedtest-1.0.0-freebsd.pkg"
 ```
