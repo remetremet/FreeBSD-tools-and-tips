@@ -24,8 +24,10 @@ Future
  - add more example commands
 
 
-Use it if you like it.
+---
 
 ![license-image](https://img.shields.io/github/license/remetremet/FreeBSD-tools-and-tips?style=plastic)
 ![last-commit-image](https://img.shields.io/github/last-commit/remetremet/FreeBSD-tools-and-tips?style=plastic)
 ![repo-size-image](https://img.shields.io/github/repo-size/remetremet/FreeBSD-tools-and-tips?style=plastic)
+
+Use it if you like it.
