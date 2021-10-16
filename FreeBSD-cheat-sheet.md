@@ -183,7 +183,7 @@ Copy files or block devices: `dd if=${input_device} of=${output_device} bs=4{blo
 
 Fast create empty file of any size: `dd if=/dev/zero of=${filename} bs=1 seek=${size} count=1` (size can be 16384, 128k, 16M, 1G, ...)
 
-Get number of files in a directory and all subdirectories: `ls -lR | grep "^-" | wc -l`
+Get number of files in a directory and all its subdirectories: `ls -lR | grep "^-" | wc -l`
 
 
 OS/benchmarks
