@@ -152,5 +152,5 @@ zabbix54-frontend zabbix54-proxy zabbix54-server
 ```
 - official Ookla's speedtest client
 ```
-pkg add "https://bintray.com/ookla/download/download_file?file_path=ookla-speedtest-1.0.0-freebsd.pkg"
+pkg add "https://install.speedtest.net/app/cli/ookla-speedtest-1.0.0-freebsd.pkg"
 ```
