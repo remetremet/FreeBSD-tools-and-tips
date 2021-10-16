@@ -343,6 +343,7 @@ Let's Encrypt (needs pkg **py37-certbot**)
 Create certificate: `certbot --email address@domain.com --agree-tos --manual-public-ip-logging-ok -d "domain.com" -d "*.domain.com" --manual --preferred-challenges dns certonly`
 
 Line to add to authoritative DNS zone: `_acme-challenge         IN      300     TXT     vgZn1G26PK5Btvh9f14-xHRI8KwnPf3BWe8Q8r1wS23`
+It is mandatory to change DNS server configuration for accessing these zones!
 
 Renew certificates: `certbot renew` (needs pkg **py37-certbot**)
 
