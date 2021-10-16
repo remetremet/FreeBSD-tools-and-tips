@@ -266,7 +266,7 @@ Destroy ZFS pool: `zpool destroy ${poolname}`
 
 Set compression to ZFS pool: `zfs set compression=lz4 ${poolname}`
 
-Add mount point with options: `zfs create -o compress=lz4 ${poolname}/${mountpoint}`
+Add mount point with options: `zfs create -o compression=lz4 -o mountpoint=/${mountpoint} ${poolname}/${mountpoint}`
 
 Health check:
 ```
