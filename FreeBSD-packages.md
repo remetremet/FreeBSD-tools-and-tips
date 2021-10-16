@@ -30,7 +30,7 @@ Essential packeges on all servers
 - `pciids`
 - `pciutils`
 - `perl5`
-- `python37`
+- `python38`
 - `rsync`
 - `screen`
 - `smartmontools`
@@ -41,25 +41,25 @@ Essential packeges on all servers
 - `tuptime`
 - `usbutils`
 - `wget`
-- `zabbix52-agent`
+- `zabbix54-agent`
 ```
 pkg install bash bash-completion bind-tools bsdstats ca_root_nss curl ddrescue dhcpdump dmidecode \
 fdupes flashrom fping gawk git iftop iperf3 iso-codes joe links lsof lynx mc nmap openssl pciids pciutils perl5 \
-python37 rsync screen smartmontools sudo tcpdump tcping tcptraceroute tuptime usbutils wget zabbix52-agent
+python38 rsync screen smartmontools sudo tcpdump tcping tcptraceroute tuptime usbutils wget zabbix54-agent
 ```
 
 
 Optional packages for DB server (MariaDB, MySQL, SQLite)
 ---
-- `mariadb104-client` (**`pkg lock` recommended**)
-- `mariadb104-server` (**`pkg lock` recommended**)
+- `mariadb105-client` (**`pkg lock` recommended**)
+- `mariadb105-server` (**`pkg lock` recommended**)
 - `mysql57-client`
 - `mysql57-server`
 - `mysqltuner`
 - `portupgrade`
 - `sqlite3`
 ```
-pkg install mariadb104-client mariadb104-server mysql57-client mysql57-server mysqltuner portupgrade sqlite3
+pkg install mariadb105-client mariadb105-server mysql57-client mysql57-server mysqltuner portupgrade sqlite3
 ```
 
 
@@ -134,21 +134,21 @@ Optional packages for DNS, Zabbix, Samba, Multimedia, ...
 - `nut` - UPS monitoring
 - `openipmi`
 - `portupgrade`
-- `py37-certbot` - Let's Encrypt
-- `py37-certbot-dns-rfc2136` - Let's Encrypt
-- `py37-pip`
-- `py37-speedtest-cli` - Ookla's speedtest unofficial client
+- `py38-certbot` - Let's Encrypt
+- `py38-certbot-dns-rfc2136` - Let's Encrypt
+- `py38-pip`
+- `py38-speedtest-cli` - Ookla's speedtest unofficial client
 - `samba413` - SMB file sharing
 - `ser2net` - RS232 communication over IP
 - `sysbench` - CPU/file system/SQL benchmark (**ports compiled version needed for MariaDB**)
 - `wordpress`
-- `zabbix52-frontend` - Zabbix
-- `zabbix52-proxy` - Zabbix
-- `zabbix52-server` - Zabbix (**ports compiled version needed for MariaDB**)
+- `zabbix54-frontend` - Zabbix
+- `zabbix54-proxy` - Zabbix
+- `zabbix54-server` - Zabbix (**ports compiled version needed for MariaDB**)
 ```
 pkg install bind916 ffmpeg fusefs-exfat fusefs-ntfs fusefs-ext2 libcoap mediatomb mosquitto net-snmp nut\
-openipmi portupgrade py37-certbot py37-certbot-dns-rfc2136 py37-pip py37-speedtest-cli samba413 ser2net\
-zabbix52-frontend zabbix52-proxy zabbix52-server
+openipmi portupgrade py38-certbot py38-certbot-dns-rfc2136 py38-pip py38-speedtest-cli samba413 ser2net\
+zabbix54-frontend zabbix54-proxy zabbix54-server
 ```
 - official Ookla's speedtest client
 ```
