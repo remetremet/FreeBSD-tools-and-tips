@@ -1,5 +1,5 @@
 # FreeBSD-tools-and-tips
-Tools, scripts and tips I'm using administering FreeBSD servers.
+Tools, scripts and tips I'm using administering FreeBSD servers. These tips, tricks, cheats, etc. presumes you already know FreeBSD OS at some level - I can't recommend it for pure newbies.
 
 
 List of usefull CLI/shell commands: [FreeBSD-cheat-sheet.md](FreeBSD-cheat-sheet.md)
