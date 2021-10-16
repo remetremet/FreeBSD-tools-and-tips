@@ -192,7 +192,7 @@ CPU benchmark: `sysbench --test=cpu --cpu-max-prime=20000 run` (needs pkg **sysb
 
 CPU floating point benchmark: `flops` (needs pkg **flops**)
 
-File system benchmark: `bonnie++ -d /home -s32G -n4 -f -b -u ${user} -c4` (needs pkg **bonnie++**)
+File system benchmark: `bonnie++ -d /home/${user} -s32G -n4 -f -b -u ${user} -c4` (needs pkg **bonnie++**)
 
 File system IO benchmark: (needs pkg **sysbench**)
 ```
