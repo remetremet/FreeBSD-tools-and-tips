@@ -50,6 +50,14 @@ python38 rsync screen sendmail smartmontools sudo tcpdump tcping tcptraceroute t
 ```
 
 
+Optional packages for ZFS
+---
+- `zfs-stats`
+```
+pkg install zfs-stats
+```
+
+
 Optional packages for DB server (MariaDB, MySQL, SQLite)
 ---
 - `mariadb105-client` (**`pkg lock` recommended**)
