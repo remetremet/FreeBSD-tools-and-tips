@@ -251,7 +251,7 @@ Destroy memory disk:
 
 ZFS
 ---
-Optimal number of disks for ZFS:
+Optimal number of disks for ZFS (optimal performance):
 ```
 RAIDZ1 3, 5, 9
 RAIDZ2 4, 6, 10
@@ -266,14 +266,24 @@ Destroy ZFS pool: `zpool destroy ${poolname}`
 
 Set compression to ZFS pool: `zfs set compression=lz4 ${poolname}`
 
-Add mount point with options: `zfs create -o compression=lz4 -o mountpoint=/${mountpoint} ${poolname}/${mountpoint}`
+Add dataset with options and mount point: `zfs create -o compression=lz4 -o mountpoint=/${mountpoint} ${poolname}/${mountpoint}`
+Warning! You can't migrate existing data from directory into your new dataset automatically. You will have to move it in manually.
 
-Health check:
+Health check and information:
 ```
 zfs list
+zfs get compressratio
 zpool list
 zpool status
+zpool iostat ${poolname} 1
 ```
+plus install **zfs-stats** package
+
+How to access Root on ZFS (default ZFS from installation) from single user mode or live CD:
+ - first create temp directory `mkdir /tmp/mydir`
+ - next import ZFS pool: `zpool import -fa -R /tmp/mydir`
+ - now you have **almost** all your dataset mounted and accessible - the only root dir is missing
+ - mount root dataset: `zfs mount ${poolname}/ROOT/default`
 
 
 GELI (disk encryption)
