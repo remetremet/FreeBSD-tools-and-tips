@@ -386,11 +386,12 @@ cd /usr/local/etc/openvpn/easy-rsa
 
 Sendmail
 ---
-Generate missing **dh.param** for Sendmail:
+Create host specific configs and generate missing **dh.param** for Sendmail STARTTLS:
 ```
-cd /etc/mail/certs
-openssl dhparam -out dh.param 4096
-cd /etc/mail && make restart
+cd /etc/mail
+make
+openssl dhparam -out /etc/mail/certs/dh.param 4096
+make restart
 ```
 
 Update ClamAV virus database: `freshclam`
