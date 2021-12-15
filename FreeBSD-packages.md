@@ -22,6 +22,7 @@ Essential packages on all servers
 - `iperf3`
 - `iso-codes`
 - `joe`
+- `jq`
 - `links`
 - `lsof`
 - `lynx`
@@ -46,8 +47,8 @@ Essential packages on all servers
 - `wget`
 - `zabbix54-agent`
 ```
-pkg install bash bash-completion bind-tools bsdstats ca_root_nss curl ddrescue dhcpdump dmidecode \
-fdupes flashrom fping gawk git hw-probe iftop iperf3 iso-codes joe links lsof lynx mc ngrep nmap openssl pciids pciutils perl5 \
+pkg install bash bash-completion bind-tools bsdstats ca_root_nss curl ddrescue dhcpdump dmidecode fdupes flashrom \
+fping gawk git hw-probe iftop iperf3 iso-codes joe jq links lsof lynx mc ngrep nmap openssl pciids pciutils perl5 \
 python38 rsync screen sendmail smartmontools sudo tcpdump tcping tcptraceroute tuptime usbutils wget zabbix54-agent
 ```
 
