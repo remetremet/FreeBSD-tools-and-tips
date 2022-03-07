@@ -130,6 +130,16 @@ pkg install easy-rsa isc-dhcp44-server openvpn portupgrade unbound
 ```
 
 
+Optional packages for VxLAN server (ZeroTier, DHCP, caching DNS)
+---
+- `isc-dhcp44-server`
+- `unbound`
+- `zerotier`
+```
+pkg install isc-dhcp44-server unbound zerotier
+```
+
+
 Optional packages for DNS, Zabbix, Samba, Multimedia, ...
 ---
 - `bind916` - Authoritative DNS
