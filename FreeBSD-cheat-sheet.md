@@ -91,6 +91,8 @@ pkg lock ${name}
 pkg unlock ${name}
 ```
 
+List all locked packages: `pkg lock -l`
+
 Update package database: `pkg update [-f]` (optional with parameter **-f** = forced)
 
 Update packages: `pkg upgrade [-f]` (optional with parameter **-f** = forced)
