@@ -33,7 +33,7 @@ Essential packages on all servers
 - `pciids`
 - `pciutils`
 - `perl5`
-- `python38`
+- `python39`
 - `rsync`
 - `screen`
 - `sendmail`
@@ -49,7 +49,7 @@ Essential packages on all servers
 ```
 pkg install bash bash-completion bind-tools bsdstats ca_root_nss curl ddrescue dhcpdump dmidecode fdupes flashrom \
 fping gawk git hw-probe iftop iperf3 iso-codes joe jq links lsof lynx mc ngrep nmap openssl pciids pciutils perl5 \
-python38 rsync screen sendmail smartmontools sudo tcpdump tcping tcptraceroute tuptime usbutils wget zabbix54-agent
+python39 rsync screen sendmail smartmontools sudo tcpdump tcping tcptraceroute tuptime usbutils wget zabbix54-agent
 ```
 
 
@@ -78,12 +78,12 @@ pkg install mariadb105-client mariadb105-server mysql57-client mysql57-server my
 Optional packages for Web server (Apache, Nginx, PHP)
 ---
 - `apache24`
-- `mod_php74`
+- `mod_php80`
 - `nginx`
-- `php74`
+- `php80`
 - `portupgrade`
 ```
-pkg install apache24 mod_php74 nginx php74 portupgrade
+pkg install apache24 mod_php80 nginx php80 portupgrade
 ```
 
 
@@ -156,10 +156,10 @@ Optional packages for DNS, Zabbix, Samba, Multimedia, ...
 - `nut` - UPS monitoring
 - `openipmi`
 - `portupgrade`
-- `py38-certbot` - Let's Encrypt
-- `py38-certbot-dns-rfc2136` - Let's Encrypt
-- `py38-pip`
-- `py38-speedtest-cli` - Ookla's speedtest unofficial client
+- `py39-certbot` - Let's Encrypt
+- `py39-certbot-dns-rfc2136` - Let's Encrypt
+- `py39-pip`
+- `py39-speedtest-cli` - Ookla's speedtest unofficial client
 - `samba413` - SMB file sharing
 - `ser2net` - RS232 communication over IP
 - `sysbench` - CPU/file system/SQL benchmark (**ports compiled version needed for MariaDB**)
@@ -169,7 +169,7 @@ Optional packages for DNS, Zabbix, Samba, Multimedia, ...
 - `zabbix54-server` - Zabbix (**ports compiled version needed for MariaDB**)
 ```
 pkg install bind916 ffmpeg fusefs-exfat fusefs-ntfs fusefs-ext2 libcoap mediatomb mosquitto net-snmp nut\
-openipmi portupgrade py38-certbot py38-certbot-dns-rfc2136 py38-pip py38-speedtest-cli samba413 ser2net\
+openipmi portupgrade py39-certbot py39-certbot-dns-rfc2136 py39-pip py39-speedtest-cli samba413 ser2net\
 zabbix54-frontend zabbix54-proxy zabbix54-server
 ```
 - official Ookla's speedtest client
